@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "HouN14m+QpY2n63/bSEnGEnZuB9/c5n4RHJWVT0jDp8pyh0IlguRmDghlPVzs1D8ppIuye2NS9SCxZGNX0ZAWQ==",
+  "success": true,
+  "projectFilePath": "D:\\repos\\quizmaster-api\\QuizMaster.RequestsAndResponses\\QuizMaster.RequestsAndResponses.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\James\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.2\\microsoft.aspnetcore.app.ref.3.1.2.nupkg.sha512"
+  ],
+  "logs": []
+}

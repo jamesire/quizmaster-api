@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\repos\\quizmaster-api\\QuizMasterApi\\QuizMaster.Api.csproj",
-      "projectName": "QuizMaster.Api",
-      "projectPath": "D:\\repos\\quizmaster-api\\QuizMasterApi\\QuizMaster.Api.csproj",
+      "projectUniqueName": "D:\\repos\\quizmaster-api\\QuizMaster.Domain\\QuizMaster.Domain.csproj",
+      "projectName": "QuizMaster.Domain",
+      "projectPath": "D:\\repos\\quizmaster-api\\QuizMaster.Domain\\QuizMaster.Domain.csproj",
       "packagesPath": "C:\\Users\\James\\.nuget\\packages\\",
-      "outputPath": "D:\\repos\\quizmaster-api\\QuizMasterApi\\obj\\",
+      "outputPath": "D:\\repos\\quizmaster-api\\QuizMaster.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\James\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -60,9 +60,6 @@
           }
         ],
         "frameworkReferences": {
-          "Microsoft.AspNetCore.App": {
-            "privateAssets": "none"
-          },
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }

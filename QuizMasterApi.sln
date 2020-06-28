@@ -3,7 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30128.74
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuizMasterApi", "QuizMasterApi\QuizMasterApi.csproj", "{6A137DF9-F3F3-47E3-B3CD-4251CC70A039}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuizMaster.Api", "QuizMasterApi\QuizMaster.Api.csproj", "{6A137DF9-F3F3-47E3-B3CD-4251CC70A039}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuizMaster.Domain", "QuizMaster.Domain\QuizMaster.Domain.csproj", "{801AF3AB-81CB-4B25-8881-657A3987D2F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuizMaster.RequestsAndResponses", "QuizMaster.RequestsAndResponses\QuizMaster.RequestsAndResponses.csproj", "{320C1AA5-22CD-4D1E-954C-BD77EA130CED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuizMaster.UnitTests", "QuizMaster.UnitTests\QuizMaster.UnitTests.csproj", "{72983506-79E4-4182-8F45-20A26A87FF3D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuizMaster. Storage", "QuizMaster. Storage\QuizMaster. Storage.csproj", "{1A8BC38C-A39E-426C-BC4C-454757CFE54E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +23,22 @@ Global
 		{6A137DF9-F3F3-47E3-B3CD-4251CC70A039}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6A137DF9-F3F3-47E3-B3CD-4251CC70A039}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6A137DF9-F3F3-47E3-B3CD-4251CC70A039}.Release|Any CPU.Build.0 = Release|Any CPU
+		{801AF3AB-81CB-4B25-8881-657A3987D2F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{801AF3AB-81CB-4B25-8881-657A3987D2F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{801AF3AB-81CB-4B25-8881-657A3987D2F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{801AF3AB-81CB-4B25-8881-657A3987D2F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{320C1AA5-22CD-4D1E-954C-BD77EA130CED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{320C1AA5-22CD-4D1E-954C-BD77EA130CED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{320C1AA5-22CD-4D1E-954C-BD77EA130CED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{320C1AA5-22CD-4D1E-954C-BD77EA130CED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72983506-79E4-4182-8F45-20A26A87FF3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72983506-79E4-4182-8F45-20A26A87FF3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72983506-79E4-4182-8F45-20A26A87FF3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72983506-79E4-4182-8F45-20A26A87FF3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A8BC38C-A39E-426C-BC4C-454757CFE54E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A8BC38C-A39E-426C-BC4C-454757CFE54E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A8BC38C-A39E-426C-BC4C-454757CFE54E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A8BC38C-A39E-426C-BC4C-454757CFE54E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

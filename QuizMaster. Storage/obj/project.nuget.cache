@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4fETMJISMilMg9MEjzuZ2gJ0qLrPA8/AtxrIyGiV1LR94rGYbVFFtiKN8+gCHl+C4brqm/SjLzzdzh9/Bc5yRQ==",
+  "dgSpecHash": "OvYREzpHqIosOlOpjdRFuuvBPWAAJzeTeN9RhJo9GIl16uafgvGqhSuvmwMjLQqOVklaMBBtOH/s2VnaoRdu6Q==",
   "success": true,
-  "projectFilePath": "D:\\repos\\quizmaster-api\\QuizMasterApi\\QuizMaster.Api.csproj",
+  "projectFilePath": "D:\\repos\\quizmaster-api\\QuizMaster. Storage\\QuizMaster.Storage.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\James\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.2\\microsoft.aspnetcore.app.ref.3.1.2.nupkg.sha512"
   ],
