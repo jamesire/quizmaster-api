@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuizMaster.RequestsAndRespo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuizMaster.UnitTests", "QuizMaster.UnitTests\QuizMaster.UnitTests.csproj", "{72983506-79E4-4182-8F45-20A26A87FF3D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuizMaster. Storage", "QuizMaster. Storage\QuizMaster. Storage.csproj", "{1A8BC38C-A39E-426C-BC4C-454757CFE54E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuizMaster.Storage", "QuizMaster. Storage\QuizMaster.Storage.csproj", "{1A8BC38C-A39E-426C-BC4C-454757CFE54E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
