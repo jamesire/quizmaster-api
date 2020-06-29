@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using QuizMaster.RequestsAndResponses.GetRandomQuestion;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,9 +19,9 @@ namespace QuizMasterApi.Controllers
         }
 
         [HttpGet("random")]
-        public IEnumerable<QuizController> GetRandomQuestion()
+        public IEnumerable<QuizController> GetRandomQuestion(GetRandomQuizQuestionRequest request)
         {
-            return null;
+            
         }
     }
 }

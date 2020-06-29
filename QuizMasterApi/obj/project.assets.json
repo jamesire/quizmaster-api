@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    ".NETCoreApp,Version=v3.1": {}
+    ".NETCoreApp,Version=v3.1": {
+      "QuizMaster.RequestsAndResponses/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/QuizMaster.RequestsAndResponses.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/QuizMaster.RequestsAndResponses.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "QuizMaster.RequestsAndResponses/1.0.0": {
+      "type": "project",
+      "path": "../QuizMaster.RequestsAndResponses/QuizMaster.RequestsAndResponses.csproj",
+      "msbuildProject": "../QuizMaster.RequestsAndResponses/QuizMaster.RequestsAndResponses.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    ".NETCoreApp,Version=v3.1": []
+    ".NETCoreApp,Version=v3.1": [
+      "QuizMaster.RequestsAndResponses >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\James\\.nuget\\packages\\": {}
@@ -32,7 +51,11 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\repos\\quizmaster-api\\QuizMaster.RequestsAndResponses\\QuizMaster.RequestsAndResponses.csproj": {
+              "projectPath": "D:\\repos\\quizmaster-api\\QuizMaster.RequestsAndResponses\\QuizMaster.RequestsAndResponses.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
