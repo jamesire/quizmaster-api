@@ -1,9 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using MediatR;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Primitives;
 using QuizMaster.RequestsAndResponses.GetRandomQuestion;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace QuizMasterApi.Controllers
 {
@@ -11,17 +14,19 @@ namespace QuizMasterApi.Controllers
     [Route("[controller]")]
     public class QuizController : ControllerBase
     {
-        private readonly ILogger<QuizController> _logger;
+        private readonly IMediator _mediator;
 
-        public QuizController(ILogger<QuizController> logger)
+        public QuizController(IMediator mediator)
         {
-            _logger = logger;
+            _mediator = mediator;
         }
 
         [HttpGet("random")]
-        public IEnumerable<QuizController> GetRandomQuestion(GetRandomQuizQuestionRequest request)
+        public async Task<GetRandomQuizQuestionResponse> GetRandomQuestion()
         {
-            
+            var request = new GetRandomQuizQuestionRequest();
+            var response = await _mediator.Send(request);
+            return response;
         }
     }
 }

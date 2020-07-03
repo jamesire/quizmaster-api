@@ -4,6 +4,82 @@
     "D:\\repos\\quizmaster-api\\QuizMasterApi\\QuizMaster.Api.csproj": {}
   },
   "projects": {
+    "D:\\repos\\quizmaster-api\\QuizMaster.Domain\\QuizMaster.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\repos\\quizmaster-api\\QuizMaster.Domain\\QuizMaster.Domain.csproj",
+        "projectName": "QuizMaster.Domain",
+        "projectPath": "D:\\repos\\quizmaster-api\\QuizMaster.Domain\\QuizMaster.Domain.csproj",
+        "packagesPath": "C:\\Users\\James\\.nuget\\packages\\",
+        "outputPath": "D:\\repos\\quizmaster-api\\QuizMaster.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\James\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "D:\\repos\\quizmaster-api\\QuizMaster.RequestsAndResponses\\QuizMaster.RequestsAndResponses.csproj": {
+                "projectPath": "D:\\repos\\quizmaster-api\\QuizMaster.RequestsAndResponses\\QuizMaster.RequestsAndResponses.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "MediatR": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            },
+            "Microsoft.Extensions.Logging.Abstractions": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.2, 3.1.2]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "D:\\repos\\quizmaster-api\\QuizMaster.RequestsAndResponses\\QuizMaster.RequestsAndResponses.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -37,6 +113,16 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "dependencies": {
+            "MediatR": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -85,6 +171,9 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
+              "D:\\repos\\quizmaster-api\\QuizMaster.Domain\\QuizMaster.Domain.csproj": {
+                "projectPath": "D:\\repos\\quizmaster-api\\QuizMaster.Domain\\QuizMaster.Domain.csproj"
+              },
               "D:\\repos\\quizmaster-api\\QuizMaster.RequestsAndResponses\\QuizMaster.RequestsAndResponses.csproj": {
                 "projectPath": "D:\\repos\\quizmaster-api\\QuizMaster.RequestsAndResponses\\QuizMaster.RequestsAndResponses.csproj"
               }
@@ -99,6 +188,20 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "dependencies": {
+            "MediatR": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            },
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "StructureMap.AspNetCore": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

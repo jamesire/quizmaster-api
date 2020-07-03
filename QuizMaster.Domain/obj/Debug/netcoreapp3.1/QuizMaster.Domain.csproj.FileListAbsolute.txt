@@ -1,0 +1,12 @@
+D:\repos\quizmaster-api\QuizMaster.Domain\bin\Debug\netcoreapp3.1\QuizMaster.Domain.deps.json
+D:\repos\quizmaster-api\QuizMaster.Domain\bin\Debug\netcoreapp3.1\QuizMaster.Domain.dll
+D:\repos\quizmaster-api\QuizMaster.Domain\obj\Debug\netcoreapp3.1\QuizMaster.Domain.csprojAssemblyReference.cache
+D:\repos\quizmaster-api\QuizMaster.Domain\obj\Debug\netcoreapp3.1\QuizMaster.Domain.AssemblyInfoInputs.cache
+D:\repos\quizmaster-api\QuizMaster.Domain\obj\Debug\netcoreapp3.1\QuizMaster.Domain.AssemblyInfo.cs
+D:\repos\quizmaster-api\QuizMaster.Domain\bin\Debug\netcoreapp3.1\QuizMaster.RequestsAndResponses.dll
+D:\repos\quizmaster-api\QuizMaster.Domain\bin\Debug\netcoreapp3.1\QuizMaster.Domain.pdb
+D:\repos\quizmaster-api\QuizMaster.Domain\bin\Debug\netcoreapp3.1\QuizMaster.RequestsAndResponses.pdb
+D:\repos\quizmaster-api\QuizMaster.Domain\obj\Debug\netcoreapp3.1\QuizMaster.Domain.csproj.CoreCompileInputs.cache
+D:\repos\quizmaster-api\QuizMaster.Domain\obj\Debug\netcoreapp3.1\QuizMaster.Domain.csproj.CopyComplete
+D:\repos\quizmaster-api\QuizMaster.Domain\obj\Debug\netcoreapp3.1\QuizMaster.Domain.dll
+D:\repos\quizmaster-api\QuizMaster.Domain\obj\Debug\netcoreapp3.1\QuizMaster.Domain.pdb

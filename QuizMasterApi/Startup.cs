@@ -1,7 +1,9 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
+using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -10,6 +12,11 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using QuizMaster.Api.Registries;
+using QuizMaster.Domain.Clients;
+using QuizMaster.Domain.Handlers;
+using QuizMaster.Domain.QuizQuestionClient;
+using StructureMap;
 
 namespace QuizMasterApi
 {
@@ -26,6 +33,14 @@ namespace QuizMasterApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddSingleton(typeof(ILogger<>), typeof(Logger<>));
+
+            services.AddMediatR(typeof(GetRandomQuizQuestionHandler).GetTypeInfo().Assembly);
+
+            services.AddHttpClient<IOpenTdbClient, OpenTdbClient>((provider, client) =>
+            {
+                client.BaseAddress = new System.Uri(Configuration["Urls:OpenTdbUrl"]);
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

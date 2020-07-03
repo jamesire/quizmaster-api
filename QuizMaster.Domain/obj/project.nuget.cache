@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "LuWFIuFGxdC2BFgGuevjnoZWbxqGDoCK7U1sL466A+CvYupfm2yPYpeDATC3MOrkI2uEhiByNW0HSyv3anKt5Q==",
+  "dgSpecHash": "TOarxZJH31qdxA5QNQEXzk+klXfmduSRIJmWJFpmXo2XObvwla/HVh/byKRy+fbgZZy8T9GkThFuUSpnMVTwvA==",
   "success": true,
   "projectFilePath": "D:\\repos\\quizmaster-api\\QuizMaster.Domain\\QuizMaster.Domain.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\James\\.nuget\\packages\\mediatr\\8.0.2\\mediatr.8.0.2.nupkg.sha512",
+    "C:\\Users\\James\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\3.1.5\\microsoft.extensions.logging.abstractions.3.1.5.nupkg.sha512",
+    "C:\\Users\\James\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Users\\James\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.2\\microsoft.aspnetcore.app.ref.3.1.2.nupkg.sha512"
   ],
   "logs": []
