@@ -23,7 +23,11 @@ namespace QuizMaster.Domain.Handlers
 
         public async Task<GetRandomQuizQuestionResponse> Handle(GetRandomQuizQuestionRequest request, CancellationToken cancellationToken)
         {
-            var openTdbResponse = await _openTdbClient.GetRandomQuestion();
+            OpenTdbRequest openTdbRequest = new OpenTdbRequest
+            {
+                NumberOfQuestionsToGenerate = 1
+            };
+            var openTdbResponse = await _openTdbClient.GetQuestions(openTdbRequest);
 
             var response = FormRandomQuizQuestionResponseFromOpenTdbResponse(openTdbResponse);
 

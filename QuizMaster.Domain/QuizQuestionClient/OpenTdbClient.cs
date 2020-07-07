@@ -10,6 +10,8 @@ using System.Threading.Tasks;
 using Newtonsoft.Json;
 using QuizMaster.RequestsAndResponses.Models;
 using Newtonsoft.Json.Linq;
+using System.Diagnostics;
+using System.Linq;
 
 namespace QuizMaster.Domain.Clients
 {
@@ -37,14 +39,12 @@ namespace QuizMaster.Domain.Clients
                 var httpResponse = await _client.GetAsync(_queryString);
                 if(httpResponse.IsSuccessStatusCode)
                 {
-                    var responseContent = await httpResponse.Content.ReadAsStringAsync();
-                    var quizQuestionsAsJson = PrepareTextForJsonObjectification(responseContent);
-                    response.QuizQuestions = JsonConvert.DeserializeObject<List<QuizQuestionDto>>(quizQuestionsAsJson);
-                }
-                else
-                {
                     response.ReasonPhrase = httpResponse.ReasonPhrase;
                     response.StatusCode = httpResponse.StatusCode;
+
+                    var responseContent = await httpResponse.Content.ReadAsStringAsync();
+                    var quizQuestionsAsJsonObject = PrepareTextForJsonObjectification(responseContent);
+                    response.QuizQuestions = MapJsonToQuizQuestions(quizQuestionsAsJsonObject);
                 }
             }
             catch(Exception ex)
@@ -52,14 +52,6 @@ namespace QuizMaster.Domain.Clients
                 _logger.LogError("Exception: " + ex.ToString());
             }
             
-            return response;
-        }
-
-        public Task<OpenTdbResponse> GetRandomQuestion()
-        {
-            var request = new OpenTdbRequest();
-            var response = GetQuestions(request);
-
             return response;
         }
 
@@ -79,12 +71,38 @@ namespace QuizMaster.Domain.Clients
             }
         }
 
-        private string PrepareTextForJsonObjectification(string jsonToBeModified)
+        private JToken PrepareTextForJsonObjectification(string jsonToBeModified)
         { 
             var jObject = JObject.Parse(jsonToBeModified);
-            jObject.Remove("response_code");
-            var jsonToBeReturned = JsonConvert.SerializeObject(jObject.ToString());
+            //var jsonToBeReturned = JsonConvert.SerializeObject(jObject.ToString());
+            var jsonToBeReturned = jObject["results"];
             return jsonToBeReturned;
+        }
+
+        private List<QuizQuestionDto> MapJsonToQuizQuestions(JToken jArray)
+        {
+            List<QuizQuestionDto> questionDtoList = new List<QuizQuestionDto>();
+            foreach (var token in jArray)
+            {
+                var questionDto = new QuizQuestionDto();
+                
+                var categoryString = token.Value<string>("category");
+                var typeString = token.Value<string>("type");
+                var difficultyString = token.Value<string>("difficulty");
+                var wrongAnswers = (token["incorrect_answers"] as JArray).ToObject<List<string>>();
+
+                questionDto.Question = token.Value<string>("question");
+                questionDto.CorrectAnswer = token.Value<string>("correct_answer");
+                questionDto.IncorrectAnswers = wrongAnswers;
+
+                questionDto.Category = EnumExtensionMethods.GetEnumValueFromDescription<Categories>(categoryString);
+                questionDto.Type = EnumExtensionMethods.GetEnumValueFromDescription<QuestionTypes>(typeString);
+                questionDto.Difficulty = EnumExtensionMethods.GetEnumValueFromDescription<Difficulties>(difficultyString);
+
+                questionDtoList.Add(questionDto);
+            }
+
+            return questionDtoList;
         }
     }
 }
