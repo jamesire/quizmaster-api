@@ -23,7 +23,7 @@ namespace QuizMaster.RequestsAndResponses.Enums
         Television = 14,
         [Description("Entertainment: Video Games")]
         VideoGames = 15,
-        [Description("Entertainment: Borad Games")]
+        [Description("Entertainment: Board Games")]
         BoardGames = 16,
         [Description("Science & Nature")]
         ScienceAndNature = 17,
