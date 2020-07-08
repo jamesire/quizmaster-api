@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Primitives;
@@ -11,6 +12,7 @@ using System.Threading.Tasks;
 namespace QuizMasterApi.Controllers
 {
     [ApiController]
+    [EnableCors]
     [Route("[controller]")]
     public class QuizController : ControllerBase
     {

@@ -32,6 +32,7 @@ namespace QuizMasterApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors();
             services.AddControllers();
             services.AddSingleton(typeof(ILogger<>), typeof(Logger<>));
 
@@ -54,6 +55,11 @@ namespace QuizMasterApi
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseCors(c => {
+                //c.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
+                c.WithOrigins(Configuration["Urls:ClientUrl"]).AllowAnyMethod().AllowAnyHeader();
+            });
 
             app.UseAuthorization();
 
