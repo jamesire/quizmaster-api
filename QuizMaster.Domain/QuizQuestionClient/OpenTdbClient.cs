@@ -12,6 +12,7 @@ using QuizMaster.RequestsAndResponses.Models;
 using Newtonsoft.Json.Linq;
 using System.Diagnostics;
 using System.Linq;
+using System.Web;
 
 namespace QuizMaster.Domain.Clients
 {
@@ -91,8 +92,10 @@ namespace QuizMaster.Domain.Clients
                 var difficultyString = token.Value<string>("difficulty");
                 var wrongAnswers = (token["incorrect_answers"] as JArray).ToObject<List<string>>();
 
-                questionDto.Question = token.Value<string>("question");
-                questionDto.CorrectAnswer = token.Value<string>("correct_answer");
+                wrongAnswers.ForEach(str => HttpUtility.HtmlDecode(str));
+
+                questionDto.Question = HttpUtility.HtmlDecode(token.Value<string>("question"));
+                questionDto.CorrectAnswer = HttpUtility.HtmlDecode(token.Value<string>("correct_answer"));
                 questionDto.IncorrectAnswers = wrongAnswers;
 
                 questionDto.Category = EnumExtensionMethods.GetEnumValueFromDescription<Categories>(categoryString);
