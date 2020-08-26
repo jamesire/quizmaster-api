@@ -51,6 +51,12 @@ namespace QuizMaster.Domain.Clients
             catch(Exception ex)
             {
                 _logger.LogError("Exception: " + ex.ToString());
+
+                response.QuizQuestions.Add(
+                    new QuizQuestionDto
+                    {
+                        Question = "Could not find a question... Please refresh to try again."
+                    });
             }
             
             return response;
@@ -92,11 +98,9 @@ namespace QuizMaster.Domain.Clients
                 var difficultyString = token.Value<string>("difficulty");
                 var wrongAnswers = (token["incorrect_answers"] as JArray).ToObject<List<string>>();
 
-                wrongAnswers.ForEach(str => HttpUtility.HtmlDecode(str));
-
                 questionDto.Question = HttpUtility.HtmlDecode(token.Value<string>("question"));
                 questionDto.CorrectAnswer = HttpUtility.HtmlDecode(token.Value<string>("correct_answer"));
-                questionDto.IncorrectAnswers = wrongAnswers;
+                questionDto.IncorrectAnswers = wrongAnswers.Select(str => HttpUtility.HtmlDecode(str)).ToList();
 
                 questionDto.Category = EnumExtensionMethods.GetEnumValueFromDescription<Categories>(categoryString);
                 questionDto.Type = EnumExtensionMethods.GetEnumValueFromDescription<QuestionTypes>(typeString);

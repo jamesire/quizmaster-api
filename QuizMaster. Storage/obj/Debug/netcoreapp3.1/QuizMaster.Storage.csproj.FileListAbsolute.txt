@@ -1,9 +1,9 @@
 D:\repos\quizmaster-api\QuizMaster. Storage\bin\Debug\netcoreapp3.1\QuizMaster.Storage.deps.json
 D:\repos\quizmaster-api\QuizMaster. Storage\bin\Debug\netcoreapp3.1\QuizMaster.Storage.dll
-D:\repos\quizmaster-api\QuizMaster. Storage\bin\Debug\netcoreapp3.1\QuizMaster.Storage.pdb
 D:\repos\quizmaster-api\QuizMaster. Storage\obj\Debug\netcoreapp3.1\QuizMaster.Storage.csprojAssemblyReference.cache
 D:\repos\quizmaster-api\QuizMaster. Storage\obj\Debug\netcoreapp3.1\QuizMaster.Storage.AssemblyInfoInputs.cache
 D:\repos\quizmaster-api\QuizMaster. Storage\obj\Debug\netcoreapp3.1\QuizMaster.Storage.AssemblyInfo.cs
+D:\repos\quizmaster-api\QuizMaster. Storage\bin\Debug\netcoreapp3.1\QuizMaster.Storage.pdb
 D:\repos\quizmaster-api\QuizMaster. Storage\obj\Debug\netcoreapp3.1\QuizMaster.Storage.csproj.CoreCompileInputs.cache
 D:\repos\quizmaster-api\QuizMaster. Storage\obj\Debug\netcoreapp3.1\QuizMaster.Storage.dll
 D:\repos\quizmaster-api\QuizMaster. Storage\obj\Debug\netcoreapp3.1\QuizMaster.Storage.pdb

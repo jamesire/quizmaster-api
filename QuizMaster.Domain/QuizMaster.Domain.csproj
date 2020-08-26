@@ -11,6 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\QuizMaster. Storage\QuizMaster.Storage.csproj" />
     <ProjectReference Include="..\QuizMaster.RequestsAndResponses\QuizMaster.RequestsAndResponses.csproj" />
   </ItemGroup>
 

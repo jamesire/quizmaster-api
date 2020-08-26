@@ -5,12 +5,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AWSSDK.DynamoDBv2" Version="3.3.106.45" />
+    <PackageReference Include="AWSSDK.Extensions.NETCore.Setup" Version="3.3.101" />
     <PackageReference Include="MediatR" Version="8.0.2" />
     <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="8.0.1" />
     <PackageReference Include="StructureMap.AspNetCore" Version="2.0.0" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\QuizMaster. Storage\QuizMaster.Storage.csproj" />
     <ProjectReference Include="..\QuizMaster.Domain\QuizMaster.Domain.csproj" />
     <ProjectReference Include="..\QuizMaster.RequestsAndResponses\QuizMaster.RequestsAndResponses.csproj" />
   </ItemGroup>

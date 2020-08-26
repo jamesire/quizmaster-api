@@ -1,8 +1,10 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
+using Amazon.DynamoDBv2;
 using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -16,6 +18,7 @@ using QuizMaster.Api.Registries;
 using QuizMaster.Domain.Clients;
 using QuizMaster.Domain.Handlers;
 using QuizMaster.Domain.QuizQuestionClient;
+using QuizMaster.Storage.ActiveQuizzesTable;
 using StructureMap;
 
 namespace QuizMasterApi
@@ -35,6 +38,10 @@ namespace QuizMasterApi
             services.AddCors();
             services.AddControllers();
             services.AddSingleton(typeof(ILogger<>), typeof(Logger<>));
+            services.AddSingleton(typeof(IActiveQuizzesTable), typeof(ActiveQuizzesTable));
+
+            services.AddDefaultAWSOptions(Configuration.GetAWSOptions());
+            services.AddAWSService<IAmazonDynamoDB>();
 
             services.AddMediatR(typeof(GetRandomQuizQuestionHandler).GetTypeInfo().Assembly);
 

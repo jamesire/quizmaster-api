@@ -4,6 +4,79 @@
     "D:\\repos\\quizmaster-api\\QuizMaster.Domain\\QuizMaster.Domain.csproj": {}
   },
   "projects": {
+    "D:\\repos\\quizmaster-api\\QuizMaster. Storage\\QuizMaster.Storage.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\repos\\quizmaster-api\\QuizMaster. Storage\\QuizMaster.Storage.csproj",
+        "projectName": "QuizMaster.Storage",
+        "projectPath": "D:\\repos\\quizmaster-api\\QuizMaster. Storage\\QuizMaster.Storage.csproj",
+        "packagesPath": "C:\\Users\\James\\.nuget\\packages\\",
+        "outputPath": "D:\\repos\\quizmaster-api\\QuizMaster. Storage\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\James\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "AWSSDK.DynamoDBv2": {
+              "target": "Package",
+              "version": "[3.3.106.45, )"
+            },
+            "Microsoft.AspNet.WebPages": {
+              "target": "Package",
+              "version": "[3.2.7, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.2, 3.1.2]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "linux-x64": {
+          "#import": []
+        }
+      }
+    },
     "D:\\repos\\quizmaster-api\\QuizMaster.Domain\\QuizMaster.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -27,6 +100,9 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
+              "D:\\repos\\quizmaster-api\\QuizMaster. Storage\\QuizMaster.Storage.csproj": {
+                "projectPath": "D:\\repos\\quizmaster-api\\QuizMaster. Storage\\QuizMaster.Storage.csproj"
+              },
               "D:\\repos\\quizmaster-api\\QuizMaster.RequestsAndResponses\\QuizMaster.RequestsAndResponses.csproj": {
                 "projectPath": "D:\\repos\\quizmaster-api\\QuizMaster.RequestsAndResponses\\QuizMaster.RequestsAndResponses.csproj"
               }
@@ -77,6 +153,11 @@
             }
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "linux-x64": {
+          "#import": []
         }
       }
     },
@@ -145,6 +226,11 @@
             }
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "linux-x64": {
+          "#import": []
         }
       }
     }
